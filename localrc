@@ -1,0 +1,17 @@
+iso_path=/dev/sr0
+ks_cfg=ks.cfg
+
+# Kickstart configureation
+ROOT_PASSWORD=zaq12wsx
+USER_NAME=openstack
+USER_PASSWORD=zaq12wsx
+
+# DHCP configuration 
+SUBNET=192.168.1.0
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+IP_BEGIN=192.168.1.3
+IP_END=192.168.1.254
+
+# TFTP base path
+TFTP_PATH=/opt/tftp
