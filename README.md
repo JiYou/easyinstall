@@ -12,30 +12,36 @@ SIMPLE STEPS
 
 All we used is ubuntu-12.04
 
-1 Install packages.
+1 Packages
+
+  You have to use `apt-get install` command to install some packages.
 
 
-apt-get install -y --force-yes dhcp3-server tftp-hpa \
-tftpd-hpa xinetd openssh-server apache2 \
-system-config-kickstart
+    apt-get install -y --force-yes dhcp3-server tftp-hpa \
+        tftpd-hpa xinetd openssh-server apache2 \
+        system-config-kickstart
 
 
-2 Change /etc/network/interfaces.
+2 Network
+
+  You may configure you network as below. 
 
 
-  auto eth0
-  iface inet eth0 static
-       address 192.168.1.1
-       netmask 255.255.255.0
-       gateway 192.168.1.1
-       broadcast 192.168.1.255
+    auto eth0
+    iface inet eth0 static
+           address 192.168.1.1
+           netmask 255.255.255.0
+           gateway 192.168.1.1
+           broadcast 192.168.1.255
 
 
-3 change iso path in localrc.
+3 ISO/CD path
+
+  You may change your ISO path as below.
 
 
-  /dev/sr0  # If you use CD/DVD.
-  /tmp/ubuntu-12.04-amd64.iso # If you use iso file.
+    iso_path=/dev/sr0  # If you use CD/DVD.
+    iso_path=/tmp/ubuntu-12.04-amd64.iso # If you use iso file.
 
 
 4 run install.sh  
