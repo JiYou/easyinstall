@@ -44,7 +44,11 @@ All we used is ubuntu-12.04. But PXE-server may use other version of Ubuntu.
     iso_path=/tmp/ubuntu-12.04-amd64.iso # If you use iso file.
 
 
-4 run install.sh  
+4 run install.sh
+
+  If you use simple setting to install OS. You may not see words below. If you
+  want install more complex env, you may change localrc as below.
+
 
 
 MORE SETTINGS
