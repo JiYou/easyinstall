@@ -14,11 +14,14 @@ All we used is ubuntu-12.04
 
 1 Install packages.
 
+
 apt-get install -y --force-yes dhcp3-server tftp-hpa \
 tftpd-hpa xinetd openssh-server apache2 \
 system-config-kickstart
 
+
 2 Change /etc/network/interfaces.
+
 
   auto eth0
   iface inet eth0 static
@@ -27,9 +30,13 @@ system-config-kickstart
        gateway 192.168.1.1
        broadcast 192.168.1.255
 
+
 3 change iso path in localrc.
+
+
   /dev/sr0  # If you use CD/DVD.
   /tmp/ubuntu-12.04-amd64.iso # If you use iso file.
+
 
 4 run install.sh  
 
@@ -76,12 +83,14 @@ MORE SETTINGS
   In my network configuration, (after I use apt-get install some packages), I
   write /etc/network/interfaces as below: (default)
 
+
   auto eth0
   iface inet eth0 static
        address 192.168.1.1
        netmask 255.255.255.0
        gateway 192.168.1.1
        broadcast 192.168.1.255
+
 
   After you check your network, you may have to write your network information.
   If you use 192.168.1.1 as your IP of PXE server. You may not change localrc
