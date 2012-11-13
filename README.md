@@ -1,11 +1,9 @@
 easyinstall
 ===========
 
-Deploy openstack is an diffcult job for large useage and some researchers.
-For this purpose, we write this project for deploying openstak.
+Deploy openstack is an diffcult job for large useage and some researchers. For this purpose, we write this project for deploying openstak.
 
-Until now, this project just can install OS by PXE. Before using `install.sh`
-script, you have to check these settings.
+Until now, this project just can install OS by PXE. Before using `install.sh` script, you have to check these settings.
 
 SIMPLE STEPS
 ============
@@ -46,8 +44,7 @@ All we used is ubuntu-12.04. But PXE-server may use other version of Ubuntu.
 
 4 run install.sh
 
-  If you use simple setting to install OS. You may not see words below. If you
-  want install more complex env, you may change localrc as below.
+  If you use simple setting to install OS. You may not see words below. If you want install more complex env, you may change localrc as below.
 
 
 
@@ -60,17 +57,13 @@ MORE SETTINGS
 
 2 ISO
 
-  You may use both ISO/CDROM as installation source. We have checked that
-  ubuntu-12.04-amd64.iso works very well. If you want to use your iso file, 
-  you have to change localrc as:
+  You may use both ISO/CDROM as installation source. We have checked that ubuntu-12.04-amd64.iso works very well. If you want to use your iso file, you have to change localrc as:
 
        iso_path=/abs_isopath/ubuntu-12.04-amd64.iso
 
 3 KickStart file
 
-  We already prepare one kickstart file as a template. If you want to use your
-  own kickstart file. You may use `system-config-kickstart` GUI tool to generate
-  your own kickstart configuration file.
+  We already prepare one kickstart file as a template. If you want to use your own kickstart file. You may use `system-config-kickstart` GUI tool to generate your own kickstart configuration file.
 
   Note: You may config your password & username in localrc.
         
@@ -83,15 +76,13 @@ MORE SETTINGS
 
 4 Install some deb packages.
 
-  You have to use `apt-get install` command line to install some packages. Such
-  as DHCP, xinetd, tftp-hpa, apache2.
+  You have to use `apt-get install` command line to install some packages. Such as DHCP, xinetd, tftp-hpa, apache2.
 
   Note: must use tftp-hpa to instead of tftp package.
 
 5 Check your Network.
 
-  In my network configuration, (after I use apt-get install some packages), I
-  write /etc/network/interfaces as below: (default)
+  In my network configuration, (after I use apt-get install some packages), I write /etc/network/interfaces as below: (default)
 
 
     auto eth0
@@ -102,6 +93,4 @@ MORE SETTINGS
            broadcast 192.168.1.255
 
 
-  After you check your network, you may have to write your network information.
-  If you use 192.168.1.1 as your IP of PXE server. You may not change localrc
-  file. Otherwise you may have to change your localrc as you network info.
+  After you check your network, you may have to write your network information. If you use 192.168.1.1 as your IP of PXE server. You may not change network configuration in localrc file. Otherwise you may have to change your localrc as you network info.
