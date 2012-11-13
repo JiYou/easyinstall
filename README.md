@@ -10,7 +10,7 @@ script, you have to check these settings.
 SIMPLE STEPS
 ============
 
-All we used is ubuntu-12.04
+All we used is ubuntu-12.04. But PXE-server may use other version of Ubuntu.
 
 1 Packages
 
