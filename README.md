@@ -90,12 +90,12 @@ MORE SETTINGS
   write /etc/network/interfaces as below: (default)
 
 
-  auto eth0
-  iface inet eth0 static
-       address 192.168.1.1
-       netmask 255.255.255.0
-       gateway 192.168.1.1
-       broadcast 192.168.1.255
+    auto eth0
+    iface inet eth0 static
+           address 192.168.1.1
+           netmask 255.255.255.0
+           gateway 192.168.1.1
+           broadcast 192.168.1.255
 
 
   After you check your network, you may have to write your network information.
