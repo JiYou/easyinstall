@@ -141,8 +141,8 @@ cp -rf $ks_cfg /var/www/
 
 # touch two files, otherwise will get warnings.
 # Bootstrap warning .....Packages corrupted.
-touch /var/www/$temp_str/dists/precise/restricted/binary-amd64/Packages
-touch /var/www/$temp_str/dists/precise/restricted/binary-i386/Packages
+touch /var/www/$temp_str/dists/stable/restricted/binary-amd64/Packages
+touch /var/www/$temp_str/dists/stable/restricted/binary-i386/Packages
 chmod a+r -R /var/www >/dev/null 2>&1
 
 #---------------------------------------------------
